@@ -30,6 +30,12 @@ const calculators = (function(){
   // create a tally of all meals logged so far
   let mealTally = Store.meals.length + 1;
 
+  // add new meal to existing meals
+
+  // let addNewMeal = function(price = Number, taxRate = Number, tipPercentage = Number) {
+
+  // };
+
   let render = function() {
     let subtotal = this.tallySubtotal();
     let tipTotal = this.tallyTipTotal();
@@ -54,7 +60,7 @@ const calculators = (function(){
         Tip Total: ${tipTotal.toFixed(2)}
       </li>
       <li class="js-earnings-form">
-        Meal count: ${mealTally}
+        Meal count: ${mealTally} meals
       </li>
       <li class="js-earnings-form">
         Average Tip Per Meal: ${tipAverage.toFixed(2)}
