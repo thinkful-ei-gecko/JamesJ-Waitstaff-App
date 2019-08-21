@@ -1,7 +1,7 @@
 'use strict';
 
 function main(){
-  calculators.render;
+  calculators.render();
 }
 
 $(main);
