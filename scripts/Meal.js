@@ -21,6 +21,10 @@ const Meal = (function(){
     Store.meals.push({price: meal.price, tax: meal.tax, tip: meal.tip});
   };
 
+  let clearMealData = function() {
+    Store.meals = [];
+  };
+
   let handleMealSubmit = function() {
     $('.js-calculator').on('submit', (e) => {
       e.preventDefault();
@@ -33,8 +37,17 @@ const Meal = (function(){
       calculators.render();
     });
   };
+
+  let handleTallyReset = function() {
+    $('.reset-tally').on('click', () => {
+      clearMealData();
+      calculators.tallySubtotal();
+      calculators.render();
+    });
+  };
   
   return {
-    handleMealSubmit
+    handleMealSubmit,
+    handleTallyReset
   };
 }());

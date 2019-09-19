@@ -50,7 +50,7 @@ const calculators = (function(){
       <li class="js-customer-form">
         Tip: ${tipTotal.toFixed(2)}
       </li>
-      <li class="js-customer-form">
+      <li class="js-customer-form total-input">
         Total: ${grandTotal.toFixed(2)}
       </li>
       `

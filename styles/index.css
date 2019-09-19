@@ -1,0 +1,86 @@
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 20px;
+}
+
+.calculator {
+  border: 2px solid black;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.calculator form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+}
+
+.calculator form > * {
+  margin-bottom: 5px; 
+}
+.calculator input {
+  width: 50px;
+  margin-right: 100px;
+  border: 2px solid black;
+}
+
+.calculator label {
+  margin-left: 100px;
+}
+
+.calculator button {
+  width: 100px;
+  margin: 5px 2px;
+  margin-top: 50px;
+  border: 2px solid black;
+  box-shadow: 2px 2px grey;
+
+}
+
+.charges, .earnings {
+  border: 2px solid black;
+  margin: 10px;
+  padding: 10px;
+}
+
+.earnings {
+  border: 2px solid black;
+}
+
+.charges h2, .earnings h2 {
+  border-bottom: 2px solid black;
+  text-align: center;
+}
+
+.total-input {
+  border-top: 2px solid black;
+  padding-top: 6px;
+  margin-top: 6px;
+}
+
+.tally-container {
+  display: flex;
+  flex-direction: column;
+}
+.reset-tally {
+  width: 50px;
+  text-align: center;
+  justify-self: flex-end;
+  align-self: flex-end;
+  border: 2px solid black;
+  box-shadow: 2px 2px grey;
+  margin: 10px;
+}
