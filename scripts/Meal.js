@@ -1,5 +1,5 @@
-'use strict';
-/* global Store */
+
+/* global Store, calculators */
 
 // eslint-disable-next-line no-unused-vars
 const Meal = (function(){
@@ -20,10 +20,21 @@ const Meal = (function(){
     validateMeal(meal);
     Store.meals.push({price: meal.price, tax: meal.tax, tip: meal.tip});
   };
+
+  let handleMealSubmit = function() {
+    $('.js-calculator').on('submit', (e) => {
+      e.preventDefault();
+      const price = parseFloat(e.target.price.value);
+      const tax = parseFloat(e.target.tax.value);
+      const tip = parseFloat(e.target.tip.value);
+      createMeal({price, tax, tip});
+      $('.js-calculator').trigger('reset');
+      calculators.tallySubtotal();
+      calculators.render();
+    });
+  };
   
   return {
-    createMeal
+    handleMealSubmit
   };
 }());
-
-console.log(Meal.createMeal({price: 12, tax: 7, tip: 30}));
